@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -16,7 +16,7 @@ import AllPost from './AllPost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="community" element={<Community />} />
@@ -25,12 +25,12 @@ root.render(
       <Route path="policy" element={<PrivacyPolicy />} />
       <Route path="terms" element={<Terms />} />
       <Route path="posts" element={<AllPost />} />
-      {/* <Route path='*' 
+      <Route path='*' 
       element={
         <main>
           <p>There's nothing here</p>
         </main>
-      }/> */}
+      }/>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );

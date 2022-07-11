@@ -34,7 +34,7 @@ const Post = () => {
     }, [])
 
     const getQuote = async() => {
-        axios.get(`http://localhost:4000/user/` + id)
+        axios.get(`https://consoltserver.herokuapp.com/user/` + id)
         .then(res => {
         console.log('data received')
         const myList = res.data

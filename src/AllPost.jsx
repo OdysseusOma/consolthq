@@ -33,7 +33,7 @@ const AllPost = () => {
   },[])
 
   const getQuote = async() => {
-    axios.get(`http://localhost:4000/user`)
+    axios.get(`https://consoltserver.herokuapp.com/user`)
     .then(res => {
       const myList = res.data
       getNotes(myList)

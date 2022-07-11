@@ -32,7 +32,7 @@ const Blog = () => {
   },[])
 
   const getQuote = async() => {
-    await axios.get(`http://localhost:4000/user`)
+    await axios.get(`https://consoltserver.herokuapp.com/user`)
     .then(res => {
       const featuredList = res.data.reverse()[0]
       getNotes(featuredList)
