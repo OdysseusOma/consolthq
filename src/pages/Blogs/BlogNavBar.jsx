@@ -12,8 +12,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const BlogNavBar = () => {
   
+    const [showCommunity, setShowCommunity] = useState(false)
     const [showCarousel, setShowCarousel] = useState(false)
+
+
   const carousel = () => {setShowCarousel((prev) => !prev)}
+  const community = () => {setShowCommunity((prev) => !prev)}
   return (
       <div>
         <nav className="blogNav">
@@ -30,9 +34,10 @@ const BlogNavBar = () => {
                 </Link>{" "}
 
 
-                <Link to="/community" style={{ textDecoration: 'none'}}>
-                    <BlueButton name="Join our Community"/>
-                </Link>
+                
+                <BlueButton name="Join our Community" onClick={community} />
+                
+                
             </div>
             {showCarousel && (
             <div className="mobilelinks" id='menuItem'>
@@ -42,6 +47,11 @@ const BlogNavBar = () => {
             )}
 
             <SearchBar className='searcher'/>
+
+            {showCommunity === false? null : 
+            <div>
+                Showing community
+            </div>}
         </nav>
     </div>
   )
