@@ -25,12 +25,12 @@ root.render(
       <Route path="policy" element={<PrivacyPolicy />} />
       <Route path="terms" element={<Terms />} />
       <Route path="posts" element={<AllPost />} />
-      <Route path='*' 
+      {/* <Route path='*' 
       element={
         <main>
           <p>There's nothing here</p>
         </main>
-      }/>
+      }/> */}
     </Routes>
   </BrowserRouter>
 );
