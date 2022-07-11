@@ -1,0 +1,119 @@
+.mission {
+    max-height: 80%;
+    background-color: #F8F9FC;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    place-content: center;
+    gap: 2rem;
+    position: relative;
+    
+}
+
+.missionText {
+    display: flex;
+    place-content: center;
+    position: relative;
+}
+
+.textBorder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 330px;
+}
+
+
+.missionTextMid {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+}
+
+.missionTextSmall {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+
+
+.gridIcons {
+    margin: 1rem, auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.gridImgPadding {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.gridImg {
+    width: 200px;
+}
+
+.gridImgText {
+    max-width: 180px;
+}
+
+.tethoscopeImg {
+    position: absolute;
+    width: 100px;
+    bottom: -80px;
+    left: 2rem;
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+    .tethoscopeImg {
+        bottom: -130px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .mission {
+        height: fit-content;
+        padding: 1rem 0;
+    }
+
+    .tethoscopeImg {
+        bottom: -80px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .mission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gridIcons {
+        margin: 1rem, auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .textBorder {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .tethoscopeImg {
+        position: absolute;
+        width: 40px;
+        bottom: -67rem;
+        left: -2rem;
+    }
+}

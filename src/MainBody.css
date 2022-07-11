@@ -1,0 +1,80 @@
+.main {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textDiv {
+    height: 30rem;
+    max-width: 25rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.imageDiv {
+    height: 30rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textBig {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.textSmall {
+    font-size: 25px;
+    font-weight: 400;
+    max-width: 350px;
+}
+
+/* For tablets */
+@media only screen and (max-width: 1280px) {
+    .main {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .main {
+        align-items: flex-start;
+        height: fit-content;
+    }
+
+    .textBig {
+        font-size: 40px;
+    }
+
+    .textSmall {
+        font-size: 22px;
+        max-width: 300px;
+    }
+
+    .group10 {
+        width: 350px;
+    }
+}
+
+
+/* For mobile devices */
+@media only screen and (max-width: 700px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin: auto;
+    }
+    
+    .textDiv {
+        text-align: center;
+        align-items: center;
+    }
+
+}
+

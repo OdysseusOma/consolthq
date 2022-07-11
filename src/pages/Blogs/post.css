@@ -1,0 +1,113 @@
+.postHeader {
+    background-color: #DFE3E8;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 0.5rem;
+    padding-bottom: 5rem;
+}
+
+.postHeaderTitle {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 56px;
+}
+
+.postHeaderInfo {
+    display: flex;
+    gap: 2rem;
+}
+
+.postHeaderDate {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.postHeaderLength {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.postHeaderProfile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.postHeaderAuthorImg {
+    max-width: 35px;
+}
+
+.AuthorImg {
+    max-width: inherit;
+}
+
+.postArticle {
+    display: flex;
+    margin: 0 5rem;
+    justify-content: center;
+    gap: 1rem;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.postArticleWrap {
+    max-width: 70vw;
+    border: 1px solid #000000;
+    border-radius: 37px;
+    position: relative;
+    top: -60px;
+}
+
+.postArticleImgWrap {
+    max-width: inherit;
+    width: 956.11px;
+    height: 334.33px;
+    border-radius: 37px 37px 0 0;
+}
+
+.postArticleImg {
+    max-width: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+.postArticleText {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.postSocialMediaIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.backButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 850px) {}
+
+@media only screen and (max-width: 700px) {
+    .postHeaderTitle {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+}

@@ -1,0 +1,50 @@
+.blogNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #DFE3E8;
+}
+
+.navButtons {
+    position: relative;
+    left: 30px;
+    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    .blogNav {
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navButtons {
+        display: none;
+    }
+
+
+    .caro {
+        display: block;
+    }
+
+    .mobilelinks {
+        position: absolute;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        flex-direction: column;
+        width: 100vw;
+        gap: 1.5rem;
+        top: 3rem;
+        overflow: hidden;
+        text-align: left;
+        padding: 1.5rem 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+}

@@ -1,0 +1,170 @@
+.blogPage {
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+}
+
+.blogHeaderWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: fit-content;
+    padding: 0.5rem 0;
+}
+
+.blogHeader {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 52px;
+}
+
+.blogHeaderIcons {
+    display: flex;
+    gap: 2rem;
+}
+
+.greyIcon {
+    color: #8D8989;
+}
+
+.blogArticleWindow {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.featuredPostText {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.featuredPostBox {
+    background-color: #8DB7E3;
+    border-radius: 20px;
+    height: fit-content;
+    max-width: 654px;
+}
+
+.featuredPostImgWrap {
+    max-width: inherit;
+    max-height: 230px;
+}
+
+.FeaturedPostImg {
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.featuredPostTopic {
+    margin: 14px 25px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 39px;
+}
+
+.featuredPostInfo {
+    display: flex;
+    gap: 50px;
+    margin: 0 25px 14px 25px;
+}
+
+.featuredPostDate {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.featuredPostLength {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.featuredPostSynopsis {
+    display: flex;
+    max-width: 600px;
+    flex-wrap: wrap;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0 25px;
+}
+
+.featuredPostProfile {
+    margin: 13px 0 0 25px;
+    padding-bottom: 17px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.recommendedPostWrap {
+}
+
+.recommendedPost {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.RecommendedPostWindowBox {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.latestPostWrap {
+    padding-top: 3rem;
+    margin: auto;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.latestPostHeader {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.latestPostWindowBox {
+    display: flex;
+    max-width: inherit;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 850px) {
+    .blogArticleWindow {
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    .RecommendedPostWindowBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .featuredPostBox {
+        max-width: 90vw;
+        margin: auto;
+    }
+    .RecommendedPostWindowBox {
+        display: flex;
+    }
+
+}

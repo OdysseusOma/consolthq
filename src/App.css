@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'CamptonMid';
+    src: url(./assets/fonts/CamptonMedium.otf);
+}
+
+div, h1, h2, h3, p {
+    font-family: 'CamptonMid', Arial, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Queries put here for reference */
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 850px) {}
+
+@media only screen and (max-width: 700px) {}

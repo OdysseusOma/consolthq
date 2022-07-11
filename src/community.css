@@ -1,0 +1,95 @@
+.surveyWrapper {
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+}
+
+.pana {
+    width: 350px;
+}
+
+.surveyTextBox {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.surveyText {
+    max-width: 400px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+
+
+.newsletterWrapper {
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.newsletterTextBox {
+    max-width: 600px;
+}
+
+.newsletterText {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.015em;
+}
+
+.newsletterImg {
+    width: 420px;
+}
+@media only screen and (max-width: 1280px) {
+
+}
+
+
+@media only screen and (max-width: 850px) {
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    .surveyWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .surveyTextBox {
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .surveyText {
+        font-size: 28px;
+    }
+
+
+    .newsletterWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .newsletterImg {
+        width: 300px;
+    }
+
+    .newsletterText {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+    }
+}
