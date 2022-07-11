@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  HashRouter,
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -16,7 +16,7 @@ import AllPost from './AllPost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="community" element={<Community />} />
@@ -32,5 +32,5 @@ root.render(
         </main>
       }/>
     </Routes>
-  </HashRouter>
+  </BrowserRouter>
 );
