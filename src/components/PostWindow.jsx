@@ -42,7 +42,7 @@ const LatestPostWindow = () => {
           <div className='latestPostWindow'> 
             <div className="latestPostImgWrap"><img src={notes.imageURL} alt="Latest post image" className="LatestPostImg" /></div>
             <div className="latestPostMarginWrap">
-                <div className="latestPostTopic"><p>{notes.title.substring(0, 50)}</p></div>
+                {/* <div className="latestPostTopic"><p>{notes.title.substring(0, 50)}</p></div> */}
                 <div className="latestPostInfo">
                   <div className="latestPostDate">{notes.post_date}</div>
                   <div className="latestPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minutes read</div>

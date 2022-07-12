@@ -34,7 +34,7 @@ const Blog = () => {
   const getQuote = async() => {
     await axios.get(`https://consoltserver.herokuapp.com/user`)
     .then(res => {
-      const featuredList = res.data.reverse()[0]
+      const featuredList = res.data[0]
       getNotes(featuredList)
     })
     .catch(err => {
