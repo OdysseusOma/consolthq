@@ -68,7 +68,7 @@ const Blog = () => {
             <div className="featuredPostWrap">
               <div className="featuredPostText">Featured Post</div>
               
-              {/* <Link to={`/blog/${notes._id}`} key={notes._id}>
+              <Link to={`/blog/${notes._id}`} key={notes._id}>
                 <div className="featuredPostBox">
                   <div className="featuredPostImgWrap">
                     <img src={notes.imageURL} alt="Featured post image" className="FeaturedPostImg" />
@@ -78,16 +78,16 @@ const Blog = () => {
                   <div className="featuredPostTopic"><h2>{notes.title}</h2></div>
                   <div className="featuredPostInfo">
                     <div className="featuredPostDate">{notes.post_date}</div>
-                    <div className="featuredPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>10 minute(s) read</div>
+                    <div className="featuredPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minute(s) read</div>
                   </div>
-                  <div className="featuredPostSynopsis">{notes.article.substring(0, 134) + " ..."}</div>
-                  <div className="featuredPostProfile"> */}
+                  <div className="featuredPostSynopsis">{notes.article.substring(0, 100)}...</div>
+                  <div className="featuredPostProfile">
                     {/* add author image to file */}
-                    {/* <div className="featuredAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>
+                    <div className="featuredAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>
                     <div className="featuredPostAuthorName">{notes.author_name}</div>
                   </div>
                 </div>
-              </Link> */}
+              </Link>
             </div>
             <div className="recommendedPostWrap">
               <div className="recommendedPost">Recommended Posts</div>

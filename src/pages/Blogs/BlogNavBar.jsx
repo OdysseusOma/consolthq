@@ -7,6 +7,8 @@ import WhiteButton from '../../components/whiteButton';
 import SearchBar from '../../components/searchBar';
 import './blogNavBar.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import NewsletterForm from '../../components/NewsletterForm'
+import NewsletterImg from '../../assets/Build a community.png'
 
 
 
@@ -35,7 +37,9 @@ const BlogNavBar = () => {
 
 
                 
-                <BlueButton name="Join our Community" onClick={community} />
+                <div onClick={community}>
+                    <BlueButton name="Join our Community" />
+                </div>
                 
                 
             </div>
@@ -46,12 +50,26 @@ const BlogNavBar = () => {
             </div> 
             )}
 
-            <SearchBar className='searcher'/>
+            { 
+                showCommunity === true? 
+                (
+                <div className='communityPopUpWrap'>
+                    <div className='communityPopUp'>
+                        <div className="newsletterWrapper">
+                            <div className="newsletterTextBox">
+                            <p className="newsletterText">We’re a company leveraging on existing technologies to provide easy-to-use and easy-to-access services. We’re building a health community online, we’ll like you to join us today.</p>
+                            <div><NewsletterForm /></div>
+                            </div>
 
-            {showCommunity === false? null : 
-            <div>
-                Showing community
-            </div>}
+                            <div className="newsletterImgWrap">
+                            <img src={NewsletterImg} alt="" className="newsletterImg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>) :
+                (null)
+            }
+            <SearchBar className='searcher'/>
         </nav>
     </div>
   )

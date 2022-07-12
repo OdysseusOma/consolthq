@@ -42,17 +42,19 @@
     background-color: #8DB7E3;
     border-radius: 20px;
     height: fit-content;
-    max-width: 654px;
+    width: 654px;
 }
 
 .featuredPostImgWrap {
-    max-width: inherit;
+    width: inherit;
     max-height: 230px;
+    border-radius: 20px 20px 0 0;
 }
 
 .FeaturedPostImg {
-    max-width: inherit;
+    width: inherit;
     max-height: inherit;
+    border-radius: inherit;
 }
 
 .featuredPostTopic {
