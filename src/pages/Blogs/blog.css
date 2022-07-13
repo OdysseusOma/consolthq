@@ -163,11 +163,15 @@
 
 @media only screen and (max-width: 700px) {
     .featuredPostBox {
-        max-width: 90vw;
+        width: 90vw;
         margin: auto;
     }
     .RecommendedPostWindowBox {
         display: flex;
+    }
+
+    .featuredPostImgWrap {
+        width: inherit;
     }
 
 }
