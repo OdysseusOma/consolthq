@@ -1,20 +1,32 @@
 import React from 'react'
 import './newsletter.css'
+import { useForm } from 'react-hook-form'
 
 
 const NewsletterForm = () => {
+  const {register, handleSubmit, formState: { errors }} = useForm()
+
+  const onSubmit = (data) => {
+    console.log(data)
+  }
   return (
     <div>
       <div className="formArea">
-        <form id="formArea" method="POST" action="https://14e10974.sibforms.com/serve/MUIEAO6XeaAsUmzR54ckcH6GFXg6POEt6LYEzrRNh9X-CRhdZap39p_IYzcE_672iRwtoC88M5N1epRgkpi6TV_SkjuyS5wbbCjpsaA4xaVDZ6mkUrBMP7vjVqsxwCxSRWnIuA5_92kG-rPOXKL7B7AnZU1ilN4Z-HUVA4EvNmnLNmmNFp_WXpZomGkYKcIBvLC3nRxqebYDKwik">
+        <form id="formArea" onSubmit={handleSubmit(onSubmit)} method="POST" action="https://14e10974.sibforms.com/serve/MUIEAO6XeaAsUmzR54ckcH6GFXg6POEt6LYEzrRNh9X-CRhdZap39p_IYzcE_672iRwtoC88M5N1epRgkpi6TV_SkjuyS5wbbCjpsaA4xaVDZ6mkUrBMP7vjVqsxwCxSRWnIuA5_92kG-rPOXKL7B7AnZU1ilN4Z-HUVA4EvNmnLNmmNFp_WXpZomGkYKcIBvLC3nRxqebYDKwik">
+          <div className='entry__field'>
+            <input type="text" className="inputArea" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
+          </div>
+          <button className="subForm" type='submit'>Subscribe</button>
+        </form>
+        {errors.Email && <p className='error'>Email is invalid</p>}
+        {/* <form id="formArea" method="POST" action="https://14e10974.sibforms.com/serve/MUIEAO6XeaAsUmzR54ckcH6GFXg6POEt6LYEzrRNh9X-CRhdZap39p_IYzcE_672iRwtoC88M5N1epRgkpi6TV_SkjuyS5wbbCjpsaA4xaVDZ6mkUrBMP7vjVqsxwCxSRWnIuA5_92kG-rPOXKL7B7AnZU1ilN4Z-HUVA4EvNmnLNmmNFp_WXpZomGkYKcIBvLC3nRxqebYDKwik">
           <div className="entry__field">
             <input className="inputArea" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
           </div>
-
-          <button className="subForm" form="sib-form" type="submit">
+          <button className="subForm" form="sib-form" type="submit" onSubmit={(e) => {console.log(e)}}>
             SUBSCRIBE
           </button>
-        </form>
+        </form> */}
             
       </div>
     </div>

@@ -2,12 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+    justify-content: center;
 }
 
 .latestPostWindow {
     display: flex;
     flex-direction: column;
-    max-width: 370px;
+    max-width: 320px;
     height: fit-content;
     border: 0.5px solid #47445C;
     border-radius: 20px;
@@ -16,15 +17,15 @@
 
 .latestPostImgWrap {
     display: flex;
-    width: 370px;
-    max-height: 129.38px;
+    width: 320px;
+    height: 129.38px;
     border-radius: 20px 20px 0 0;
 }
 
 .LatestPostImg {
     display: flex;
     width: inherit;
-    max-height: inherit;
+    height: inherit;
     border-radius: inherit;
 }
 
@@ -84,14 +85,14 @@
     }
 
     .latestPostWindow {
-        max-width: 390px;
+        max-width: 320px;
         height: 360px;
         border: 0.5px solid #47445C;
         border-radius: 20px;
     }
 
     .latestPostImgWrap {
-        width: 390px;
+        width: 320px;
         max-height: 115px;
         border-radius: 20px 20px 0 0;
     }

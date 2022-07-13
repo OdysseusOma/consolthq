@@ -1,7 +1,7 @@
 .blogNav {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem 2rem;
     background-color: #DFE3E8;
 }
 
@@ -14,21 +14,16 @@
 }
 
 .communityPopUpWrap {
-    display: flex;
     position: absolute;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
+    background-color: #DFE3E8;
+    left: 50%;
+    top: 74px;
+    transform: translateX(-50%);
+
 }
 
 .communityPopUp {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    top: 5rem;
-    background-color: #DFE3E8;
+
 }
 
 

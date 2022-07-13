@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -13,10 +13,11 @@ import Post from './pages/Blogs/Post';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Terms from './components/Terms';
 import AllPost from './AllPost';
+import Loadingpng from './assets/loadingimage.png'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route exact path="/" element={<App />} />
       <Route path="community" element={<Community />} />
@@ -27,10 +28,12 @@ root.render(
       <Route path="posts" element={<AllPost />} />
       <Route path='*' 
       element={
-        <main>
-          <p>There's nothing here</p>
+        <main style={{display: 'flex', height: '100vh', width: '100vw', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem'}}>
+          <img src={Loadingpng} alt="" />
+          <p>Opps... Something's wrong</p>
+          <h3>Try again Later</h3>
         </main>
       }/>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );

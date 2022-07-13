@@ -24,4 +24,10 @@
     border: 0.735669px solid #1B8772;
     border-radius: 0px 11.035px 11.035px 0px;
     padding: 0 20px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    padding-top: 1rem;
 }

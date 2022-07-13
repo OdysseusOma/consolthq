@@ -42,7 +42,7 @@
     background-color: #8DB7E3;
     border-radius: 20px;
     height: fit-content;
-    width: 654px;
+    width: 550px;
 }
 
 .featuredPostImgWrap {
@@ -133,6 +133,7 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 37px;
+    margin-left: 80px;
 }
 
 .latestPostWindowBox {
