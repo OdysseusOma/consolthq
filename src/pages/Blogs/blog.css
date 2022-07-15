@@ -154,6 +154,7 @@
         gap: 1rem;
     }
 
+
     .RecommendedPostWindowBox {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -162,16 +163,85 @@
 }
 
 @media only screen and (max-width: 700px) {
+    .blogHeader {
+        font-size: 12px;
+    }
+
+    .blogIcon {
+        height: 10px;
+        padding-bottom: 1rem;
+    }
+
+    .blogArticleWindow {
+        margin: auto 1.5rem;
+    }
+
     .featuredPostBox {
-        width: 90vw;
+        width: 70vw;
         margin: auto;
     }
+
+    .featuredPostTopic {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .featuredPostInfo {
+        display: flex;
+        gap: 0;
+        margin: 0 0 14px 0;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .featuredPostDate{
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .featuredPostLength {
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .featuredPostSynopsis {
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .blogMobileText {
+        font-size: 23px;
+    }
+
     .RecommendedPostWindowBox {
         display: flex;
     }
 
+    .recommendedPost {
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 30px;
+    }
+
     .featuredPostImgWrap {
         width: inherit;
+    }
+
+    .AuthorImg {
+        height: 35px;
+    }
+
+    .featuredPostAuthorName {
+        font-size: 15px;
+        font-weight: 200px;
+    }
+
+    .latestPostHeader {
+        margin-left: 20px;
     }
 
 }

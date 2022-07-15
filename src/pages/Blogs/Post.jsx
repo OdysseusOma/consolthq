@@ -58,7 +58,7 @@ const Post = () => {
             <p>Yes, I’m talking to YOU!</p>
         </div>): 
         <div>
-            <BlogNavBar />
+            <BlogNavBar className='blgNavBarPost'/>
 
             <div className='postHeader'>
                 

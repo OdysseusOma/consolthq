@@ -11,7 +11,9 @@ const MissionSection = () => {
                 <h3 className='missionTextMid'>Our Mission</h3>
                 <p className='missionTextSmall'>Provide timely, quality, accessible and affordable health care with ease.</p>
             </div>
-            <img className='tethoscopeImg' src={Group8} alt="" />
+            <div className='tethoscopeBox'>
+                <img className='tethoscopeImg' src={Group8} alt="" />
+            </div>
         </div>
 
         <div className="missionIcons">

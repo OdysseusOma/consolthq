@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
         <div className="footerCopyrightWrap">
             <div className="footerCopyright">
-                <CopyrightIcon />Consolt Medical Technologies . All rights reserved
+                <CopyrightIcon className='CopyrightIcon'/>Consolt Medical Technologies . All rights reserved
             </div> 
         </div>
         

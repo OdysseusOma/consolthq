@@ -71,7 +71,8 @@
     }
 
     .surveyText {
-        font-size: 28px;
+        font-size: 20px;
+        max-width: 330px;
     }
 
 
@@ -83,13 +84,18 @@
     }
 
     .newsletterImg {
-        width: 300px;
+        width: 225px;
     }
 
     .newsletterText {
         font-weight: 400;
+        max-width: 350px;
         font-size: 18px;
         line-height: 18px;
         text-align: center;
+    }
+
+    .pana {
+        width: 220px;
     }
 }

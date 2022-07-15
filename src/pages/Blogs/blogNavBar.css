@@ -44,12 +44,12 @@
         display: block;
     }
 
-    .mobilelinks {
+    .mobileBlogLinks {
         position: absolute;
         display: flex;
-        background-color: rgb(255, 255, 255);
+        background-color: #DFE3E8;
         flex-direction: column;
-        width: 100vw;
+        width: 80vw;
         gap: 1.5rem;
         top: 3rem;
         overflow: hidden;
@@ -67,4 +67,8 @@
         justify-content: center;
     }
 
+    .communityPopUpWrap {
+        z-index: 7;
+        top: 150px;
+    }
 }

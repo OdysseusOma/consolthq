@@ -104,16 +104,24 @@
         row-gap: 0.5rem;
     }
 
+    .gridImg {
+        width: 150px;
+    }
+
     .textBorder {
         display: flex;
         text-align: center;
         align-items: center;
     }
 
+    .tethoscopeBox {
+        position: relative;
+    }
+
     .tethoscopeImg {
         position: absolute;
         width: 40px;
-        bottom: -67rem;
-        left: -2rem;
+        bottom: -54rem;
+        left: -22rem;
     }
 }

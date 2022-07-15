@@ -1,4 +1,4 @@
-.main {
+.mainBody {
     display: flex;
     height: 80vh;
     align-items: center;
@@ -35,13 +35,13 @@
 
 /* For tablets */
 @media only screen and (max-width: 1280px) {
-    .main {
+    .mainBody {
         margin: 0 1rem;
     }
 }
 
 @media only screen and (max-width: 850px) {
-    .main {
+    .mainBody {
         align-items: flex-start;
         height: fit-content;
     }
@@ -63,7 +63,7 @@
 
 /* For mobile devices */
 @media only screen and (max-width: 700px) {
-    .main {
+    .mainBody {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
@@ -74,6 +74,16 @@
     .textDiv {
         text-align: center;
         align-items: center;
+        height: 330px;
+    }
+
+    .imageDiv {
+        width: 80vw;
+        height: 280px;
+    }
+
+    .group10 {
+        width: 285px;
     }
 
 }

@@ -6,7 +6,7 @@ import BlueButton from './components/blueButton';
 
 const MainBody = (props) => {
   return (
-    <header className='main'>
+    <header className='mainBody'>
         <div className="textDiv">
           <div className="textBig">
             <p className="bigText">

@@ -22,7 +22,6 @@ const BlogNavBar = () => {
   return (
       <div>
         <nav className="blogNav">
-            <a className="caro" onClick={carousel}><MenuIcon /></a>
             <Link to="/">
             <div className="logo">
                 <img src={Logo} alt="Consolt" className='logoImg'/>
@@ -43,9 +42,9 @@ const BlogNavBar = () => {
                 
             </div>
             {showCarousel && (
-            <div className="mobilelinks" id='menuItem'>
-            <Link to="/blog" style={{ textDecoration: 'none' }}>Blog</Link>
-            <a href='#footer'>Join our Community</a>
+            <div className="mobileBlogLinks" id='menuItem'>
+            <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>
+            <a onClick={community}>Join our Community</a>
             </div> 
             )}
 
@@ -62,6 +61,7 @@ const BlogNavBar = () => {
                 (null)
             }
             <SearchBar className='searcher'/>
+            <a className="caro" onClick={carousel}><MenuIcon /></a>
         </nav>
     </div>
   )

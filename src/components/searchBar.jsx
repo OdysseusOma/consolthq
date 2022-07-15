@@ -58,7 +58,7 @@ export default function SearchAppBar() {
   },[])
 
   const getQuote = async() => {
-    axios.get(`http://localhost:4000/user`)
+    axios.get(`https://consoltserver.herokuapp.com/user`)
     .then(res => {
       const myList = res.data
       getNotes(myList)
@@ -93,21 +93,30 @@ export default function SearchAppBar() {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          position: 'absolute', backgroundColor: '#C0C7CE', borderRadius: '15px'
+          zIndex: '4',
+          position: 'absolute', backgroundColor: '#DFE3E8', borderRadius: '15px'
         }}>{notes.filter((user)=>
           user.title.toLowerCase().includes(searchPop) ||
           user.article.toLowerCase().includes(searchPop) ||
           user.author_name.toLowerCase().includes(searchPop)
           ).map(
           (user) => (
-            <li key={user.id} style={{listStyle:'none', padding: '3px'}}>
+            <li key={user.id} style={{listStyle:'none', padding: '3px', zIndex:'5', gap: '1rem'}}>
               <Link to={`/blog/${user._id}`}>
                 <div style={{
                   display: 'flex',
-                  flexDirection: 'column' 
+                  flexDirection: 'column',
+                  borderTop: '1px dotted black',
+                  borderBottom: '1px dotted black',
+                  minHeight: '60px',
+                  minWidth: '270px',
+                  margin: 'auto',
+                  justifyContent: 'center',
+                  backgroundColor: '#ddd9ff',
+
                 }}>
-                  <p>{user.title}</p>
-                  <p style={{color: '#243977', fontSize: '13px', display: 'flex', justifyContent: 'flex-end'}}>{user.author_name}</p>
+                  <p style={{paddingLeft: '1rem', color: 'black'}}>{user.title}</p>
+                  <p style={{color: '#243977', fontSize: '13px', display: 'flex', justifyContent: 'flex-end', paddingRight: '0.5rem'}}>Author: {user.author_name}</p>
                 </div>
               </Link>
             </li>

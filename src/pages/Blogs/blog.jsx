@@ -17,6 +17,7 @@ import Loadingpng from '../../assets/loadingimage.png'
 
 const Blog = () => {
   const [notes, getNotes] = useState('');
+  const [synoped, setSynoped] = useState('');
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const Blog = () => {
     await axios.get(`https://consoltserver.herokuapp.com/user/featured`)
     .then(res => {
       const featuredList = res.data
+      setSynoped(featuredList.article.substring(0, 134))
       getNotes(featuredList)
     })
     .catch(err => {
@@ -59,14 +61,14 @@ const Blog = () => {
           <div className="blogHeaderWrap">
             <div className="blogHeader"><h1>The Consoltant Blog</h1></div>
             <div className="blogHeaderIcons">
-              <div className="twitter"><a href='https://www.google.com'><TwitterIcon /></a></div>
-              <div className="instagram"><a href='https://www.google.com'><InstagramIcon /></a></div>
-              <div className="facebook"><a href='https://www.google.com'><FacebookRoundedIcon /></a></div>
+              <div className="twitter blogIcon"><a href='https://www.google.com'><TwitterIcon /></a></div>
+              <div className="instagram blogIcon"><a href='https://www.google.com'><InstagramIcon /></a></div>
+              <div className="facebook blogIcon"><a href='https://www.google.com'><FacebookRoundedIcon /></a></div>
             </div>
           </div>
           <div className="blogArticleWindow">
             <div className="featuredPostWrap">
-              <div className="featuredPostText">Featured Post</div>
+              <div className="featuredPostText blogMobileText">Featured Post</div>
               
               <Link to={`/blog/${notes._id}`}>
                 <div className="featuredPostBox">
@@ -80,7 +82,7 @@ const Blog = () => {
                     <div className="featuredPostDate">{notes.post_date}</div>
                     <div className="featuredPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minute(s) read</div>
                   </div>
-                  <div className="featuredPostSynopsis">{notes.article}...</div>
+                  <div className="featuredPostSynopsis">{synoped}...</div>
                   <div className="featuredPostProfile">
                     {/* add author image to file */}
                     <div className="featuredAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>
@@ -90,7 +92,7 @@ const Blog = () => {
               </Link>
             </div>
             <div className="recommendedPostWrap">
-              <div className="recommendedPost">Recommended Posts</div>
+              <div className="recommendedPost blogMobileText">Recommended Posts</div>
               <div className="RecommendedPostWindowBox">
                 <RecommendedPostWindow />
                 <RecommendedPostWindow />
@@ -103,7 +105,7 @@ const Blog = () => {
     
     
           <div className="latestPostWrap">
-            <div className="latestPostHeader">Latest Posts</div>
+            <div className="latestPostHeader blogMobileText">Latest Posts</div>
             <div className="latestPostWindowBox">
               <LatestPostWindow className='latestpostalign'/>
             </div>
