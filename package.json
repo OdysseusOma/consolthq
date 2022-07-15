@@ -2,7 +2,7 @@
   "name": "reacttest",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://odysseusoma.github.io/consolthq/#/blog",
+  "homepage": "https://bespoke-choux-4fd65f.netlify.app/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",

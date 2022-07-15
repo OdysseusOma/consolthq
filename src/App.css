@@ -16,6 +16,12 @@ a {
     color: black;
 }
 
+.App {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
 /* Queries put here for reference */
 @media only screen and (max-width: 1280px) {}
 

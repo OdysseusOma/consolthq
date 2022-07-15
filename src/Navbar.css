@@ -37,7 +37,8 @@
         top: 3rem;
         overflow: hidden;
         text-align: left;
-        padding: 1.5rem 0;        font-weight: 400;
+        padding: 1.5rem 0;        
+        font-weight: 400;
         font-size: 20px;
         line-height: 25px;
     }

@@ -25,7 +25,7 @@ const BlogNavBar = () => {
             <a className="caro" onClick={carousel}><MenuIcon /></a>
             <Link to="/">
             <div className="logo">
-                <img src={Logo} alt="Consolt" />
+                <img src={Logo} alt="Consolt" className='logoImg'/>
             </div>
             </Link>
 

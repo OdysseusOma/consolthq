@@ -60,4 +60,11 @@
         line-height: 25px;
     }
 
+    .logoImg {
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
