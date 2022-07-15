@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/consolthq/static/css/main.630cea67.css",
-    "main.js": "/consolthq/static/js/main.8adebca5.js",
+    "main.css": "/consolthq/static/css/main.916675f8.css",
+    "main.js": "/consolthq/static/js/main.421c262e.js",
     "static/media/Group10.png": "/consolthq/static/media/Group10.0160e340e209c51b8637.png",
     "static/media/Rectangle 31.png": "/consolthq/static/media/Rectangle 31.09208f4b29091ba13480.png",
     "static/media/CamptonMedium.otf": "/consolthq/static/media/CamptonMedium.94bad8d8423881bced44.otf",
@@ -10,11 +10,11 @@
     "static/media/Group11.png": "/consolthq/static/media/Group11.3b092ad80043739128b1.png",
     "static/media/Rectangle 57.png": "/consolthq/static/media/Rectangle 57.6ebbd2ab6c8e3a10a8c2.png",
     "index.html": "/consolthq/index.html",
-    "main.630cea67.css.map": "/consolthq/static/css/main.630cea67.css.map",
-    "main.8adebca5.js.map": "/consolthq/static/js/main.8adebca5.js.map"
+    "main.916675f8.css.map": "/consolthq/static/css/main.916675f8.css.map",
+    "main.421c262e.js.map": "/consolthq/static/js/main.421c262e.js.map"
   },
   "entrypoints": [
-    "static/css/main.630cea67.css",
-    "static/js/main.8adebca5.js"
+    "static/css/main.916675f8.css",
+    "static/js/main.421c262e.js"
   ]
 }
