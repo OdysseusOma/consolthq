@@ -6,21 +6,23 @@ import { useState, useEffect } from 'react'
 
 
 const NewsletterForm = () => {
-  const {register, handleSubmit, formState: { errors }} = useForm()
+  const {register, handleSubmit, reset, formState: { errors }} = useForm()
   const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
 
 
-useEffect(() => {
-        setTimeout(() => {
-            setIsSuccessfullySubmitted(false)
-        }, 4000)
-}, [isSuccessfullySubmitted])
-const onSubmit = (data) => {
-  console.log(data.Email)
-  axios.post(`https://consoltserver.herokuapp.com/user/sendinblue`, data)
-      .then(response => setIsSuccessfullySubmitted(true))
-      .catch(error => console.log('error'))
-}
+  useEffect((data) => {
+        reset({ Email: '' });
+        setTimeout((data) => {
+          setIsSuccessfullySubmitted(false)  
+        }, 3000)
+  }, [isSuccessfullySubmitted])
+  
+  const onSubmit = (data) => {
+    console.log(data.Email)
+    axios.post(`https://consoltserver.herokuapp.com/user/sendinblue`, data)
+        .then(response => setIsSuccessfullySubmitted(true))
+        .catch(error => console.log('error'))
+  }
 
 
   return (
