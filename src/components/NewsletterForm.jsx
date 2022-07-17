@@ -2,19 +2,23 @@ import React from 'react'
 import './newsletter.css'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 
 const NewsletterForm = () => {
   const {register, handleSubmit, formState: { errors }} = useForm()
+  const [isSuccessfullySubmitted, setIsSuccessfullySubmitted] = useState(false);
 
 
 useEffect(() => {
-}, [])
+        setTimeout(() => {
+            setIsSuccessfullySubmitted(false)
+        }, 4000)
+}, [isSuccessfullySubmitted])
 const onSubmit = (data) => {
   console.log(data.Email)
-  axios.post(`https://14e10974.sibforms.com/serve/MUIEANY52sPSOcL06N1sFrX5t8cOHw4LAQ4-WQ57G6TOxWfuBn5DLaHwW5svXlp1V_9CbWeTHmNycnDU0H4TPtRcI5eGKf6Jj9F8UHOY2AKldEEIDCNChawpZj7H-zDrFVYmXEWXHTXAwxFUK3p86UAEMzZDKxKOo2GZ9YfrGGjmXe6zlD4b3bL4mDG5_WYXMPj6VJR6XoccVDHS`, data.Email)
-      .then(response => console.log('successful'))
+  axios.post(`https://consoltserver.herokuapp.com/user/sendinblue`, data)
+      .then(response => setIsSuccessfullySubmitted(true))
       .catch(error => console.log('error'))
 }
 
@@ -22,21 +26,14 @@ const onSubmit = (data) => {
   return (
     <div>
       <div className="formArea">
-        <form id="formArea" onSubmit={handleSubmit(onSubmit)} method="POST" action>
+        <form id="formArea" onSubmit={handleSubmit(onSubmit)}>
           <div className='entry__field'>
             <input type="text" className="inputArea" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
           </div>
           <button className="subForm" type='submit'>Subscribe</button>
         </form>
         {errors.Email && <p className='error'>Email is invalid</p>}
-        {/* <form id="formArea" method="POST" action="https://14e10974.sibforms.com/serve/MUIEAO6XeaAsUmzR54ckcH6GFXg6POEt6LYEzrRNh9X-CRhdZap39p_IYzcE_672iRwtoC88M5N1epRgkpi6TV_SkjuyS5wbbCjpsaA4xaVDZ6mkUrBMP7vjVqsxwCxSRWnIuA5_92kG-rPOXKL7B7AnZU1ilN4Z-HUVA4EvNmnLNmmNFp_WXpZomGkYKcIBvLC3nRxqebYDKwik">
-          <div className="entry__field">
-            <input className="inputArea" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
-          </div>
-          <button className="subForm" form="sib-form" type="submit" onSubmit={(e) => {console.log(e)}}>
-            SUBSCRIBE
-          </button>
-        </form> */}
+        {isSuccessfullySubmitted && (<p className="success">Thanks for Subscribing!</p>)}
             
       </div>
     </div>
