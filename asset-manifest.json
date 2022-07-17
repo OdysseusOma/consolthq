@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1a4d28a4.css",
-    "main.js": "/static/js/main.b74957fb.js",
+    "main.js": "/static/js/main.206bc2f6.js",
     "static/media/Group10.png": "/static/media/Group10.0160e340e209c51b8637.png",
     "static/media/Rectangle 31.png": "/static/media/Rectangle 31.09208f4b29091ba13480.png",
     "static/media/CamptonMedium.otf": "/static/media/CamptonMedium.94bad8d8423881bced44.otf",
@@ -11,10 +11,10 @@
     "static/media/Rectangle 57.png": "/static/media/Rectangle 57.6ebbd2ab6c8e3a10a8c2.png",
     "index.html": "/index.html",
     "main.1a4d28a4.css.map": "/static/css/main.1a4d28a4.css.map",
-    "main.b74957fb.js.map": "/static/js/main.b74957fb.js.map"
+    "main.206bc2f6.js.map": "/static/js/main.206bc2f6.js.map"
   },
   "entrypoints": [
     "static/css/main.1a4d28a4.css",
-    "static/js/main.b74957fb.js"
+    "static/js/main.206bc2f6.js"
   ]
 }
