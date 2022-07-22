@@ -215,6 +215,7 @@
 
     .blogMobileText {
         font-size: 23px;
+        padding: 1rem 0 0 2rem;
     }
 
     .RecommendedPostWindowBox {
@@ -238,6 +239,10 @@
     .featuredPostAuthorName {
         font-size: 15px;
         font-weight: 200px;
+    }
+
+    .latestPostWrap {
+        padding-top: 1rem;
     }
 
     .latestPostHeader {

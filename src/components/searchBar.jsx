@@ -49,6 +49,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const mainSearch = {
+  borderRadius: "18px", 
+  border: "0.7px solid #645F5F"
+}
+
 
 export default function SearchAppBar() {
   const [notes, getNotes] = useState('');
@@ -75,7 +80,7 @@ export default function SearchAppBar() {
 
   return (
     <div>
-      <Search style = {{borderRadius: "18px", border: "0.7px solid #645F5F"}}>
+      <Search className='mainSearchBar' style = {mainSearch}>
       <SearchIconWrapper>
           <SearchIcon />
       </SearchIconWrapper>
@@ -87,6 +92,7 @@ export default function SearchAppBar() {
           onChange={(e) => setSearchPop(e.target.value)}
       />
       </Search>
+      
         {searchPop === ""? 
         null :
         <div className='searchPopStyle'

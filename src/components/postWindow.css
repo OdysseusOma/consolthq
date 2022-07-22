@@ -77,6 +77,48 @@
 }
 
 
+
+
+/* for pagination component */
+
+.paginationWrapper {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+    justify-content: center;
+}
+.paginationBtnWrap {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+}
+
+.paginationBtn {
+    display: flex;
+    width: 80%;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+.paginationBtn a {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(15, 53, 94);
+    color: rgb(15, 53, 94);
+    cursor: pointer;
+}
+
+.paginationBtn a:hover {
+    color: white;
+    background-color: rgb(15, 53, 94);
+}
+
+.paginationActive a {
+    color: white;
+    background-color: rgb(15, 53, 94);
+}
 @media only screen and (max-width: 1280px) {
     .mainlatestPostWindow {
         gap: auto;

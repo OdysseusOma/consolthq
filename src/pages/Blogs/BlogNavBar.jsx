@@ -8,13 +8,18 @@ import SearchBar from '../../components/searchBar';
 import './blogNavBar.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import NewsLetter from '../../NewsLetter';
+import SearchIcon from '@mui/icons-material/Search';
 
+// Collapsable package
+import { Collapsible } from 'collapsible-react-component'
+import 'collapsible-react-component/dist/index.css'
 
 
 const BlogNavBar = () => {
   
     const [showCommunity, setShowCommunity] = useState(false)
     const [showCarousel, setShowCarousel] = useState(false)
+    const [open, setOpen] = useState(false)
 
 
   const carousel = () => {setShowCarousel((prev) => !prev)}
@@ -60,9 +65,19 @@ const BlogNavBar = () => {
                 </div>) :
                 (null)
             }
-            <SearchBar className='searcher'/>
-            <a className="caro" onClick={carousel}><MenuIcon /></a>
+            <div className='searchComponent'>
+                <SearchBar className='searcher'/>
+            </div>
+            <div className='mobileSearchWrap'>
+                <a onClick={() => {setOpen(!open)}}><SearchIcon /></a>
+                <a className="caro" onClick={carousel}><MenuIcon /></a>
+            </div>
         </nav>
+        <Collapsible open={open}>
+            <div className='mobileSearchDisplay'>
+                <SearchBar />
+            </div>
+        </Collapsible>
     </div>
   )
 }

@@ -3,7 +3,6 @@
     align-items: center;
 }
 
-
 .recommendedPostInfo {
     display: flex;
     flex-direction: column;
@@ -22,3 +21,28 @@
     font-size: 13px;
     line-height: 16px;
 }
+
+@media only screen and (max-width: 850px) {
+    .recommendedPostWindowWrap {
+        padding-left: 3rem;
+    }
+    .recommendedPostTitle {
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .recommendedPostDate {
+        font-weight: 200;
+        font-size: 12;
+        line-height: 15px;
+    }
+
+    .recommededPostImg {
+        height: 60px;
+        width: fit-content;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {}

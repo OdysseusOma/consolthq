@@ -1,20 +1,23 @@
 import React from 'react'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './components/postWindow.css'
 import AuthorImg from './assets/Ellipse 1.png'
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-// import jsonData from '../mock.json'
 import axios from 'axios'
-import { useState } from 'react';
 import Loadingpng from './assets/loadingimage.png'
 import BlogNavBar from './pages/Blogs/BlogNavBar'
 import Footer from './components/Footer'
+import ReactPaginate from 'react-paginate';
+
+
 
 const AllPost = () => {
-  const [notes, getNotes] = useState('');
+  const [notes, getNotes] = useState([]);
   const [loading, setLoading] = useState(false)
+  const [pageNumber, setPageNumber] = useState(0)
 
+  
    useEffect(() => {
         setLoading(true)
         setTimeout(() => {
@@ -43,6 +46,36 @@ const AllPost = () => {
     })
   }
 
+  const postPerPage = 3
+  const postsDisplayed = pageNumber * postPerPage
+
+  const currentDisplay = notes.slice(postsDisplayed, postsDisplayed + postPerPage).map((notes) => {
+    return (
+      <Link to={`/blog/${notes._id}`} key={notes._id} onClick={onClicker}>
+        <div className='latestPostWindow'> 
+          <div className="latestPostImgWrap"><img src={notes.imageURL} alt="Latest post image" className="LatestPostImg" /></div>
+          <div className="latestPostMarginWrap">
+              <div className="latestPostTopic"><p>{notes.title.substring(0, 50)}</p></div>
+              <div className="latestPostInfo">
+                <div className="latestPostDate">{notes.post_date}</div>
+                <div className="latestPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minutes read</div>
+              </div>
+              <div className="latestPostSynopsis">{notes.article.substring(0, 134) + " ..."}</div>
+              <div className="latestPostProfile">
+                <div className="latestAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>
+                <div className="latestPostAuthorName">{notes.author_name}</div>
+              </div>
+          </div>
+        </div>
+      </Link>
+    )
+  })
+
+  const pageCount = Math.ceil(notes.length / postPerPage)
+  const changePage = ({selected}) => {
+    setPageNumber(selected)
+  }
+  
 
 
 
@@ -57,26 +90,22 @@ const AllPost = () => {
         <div>
           <BlogNavBar />
           <div style={{display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', padding: '2rem'}}>
-            {notes.length > 0 &&
-            notes.reverse().map((notes) => (
-              <Link to={`/blog/${notes._id}`} key={notes._id} onClick={onClicker}>
-                <div className='latestPostWindow'> 
-                  <div className="latestPostImgWrap"><img src={notes.imageURL} alt="Latest post image" className="LatestPostImg" /></div>
-                  <div className="latestPostMarginWrap">
-                      <div className="latestPostTopic"><p>{notes.title.substring(0, 50)}</p></div>
-                      <div className="latestPostInfo">
-                        <div className="latestPostDate">{notes.post_date}</div>
-                        <div className="latestPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minutes read</div>
-                      </div>
-                      <div className="latestPostSynopsis">{notes.article.substring(0, 134) + " ..."}</div>
-                      <div className="latestPostProfile">
-                        <div className="latestAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>
-                        <div className="latestPostAuthorName">{notes.author_name}</div>
-                      </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
+            {currentDisplay}
+          </div>
+          <div className='paginationWrapper'>
+            <div className='paginationBtnWrap'>
+              <ReactPaginate 
+                previousLabel={'Prev'}
+                nextLabel={'Next'}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={'paginationBtn'}
+                previousLinkClassName={'previousBtn'}
+                nextLinkClassName={'nextBtn'}
+                disabledClassName={'paginationDisabled'}
+                activeClassName={'paginationActive'}
+              />
+            </div>
           </div>
           <Footer />
         </div>

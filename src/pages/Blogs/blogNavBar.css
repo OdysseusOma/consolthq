@@ -22,8 +22,8 @@
 
 }
 
-.communityPopUp {
-
+.mobileSearchWrap {
+    display: none;
 }
 
 
@@ -40,8 +40,10 @@
     }
 
 
-    .caro {
-        display: block;
+    .mobileSearchWrap {
+        display: flex;
+        gap: 2rem;
+
     }
 
     .mobileBlogLinks {
@@ -70,5 +72,18 @@
     .communityPopUpWrap {
         z-index: 7;
         top: 150px;
+    }
+
+    .searchComponent {
+        display: none;
+    }
+
+    .mobileSearchDisplay {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: #DFE3E8;
+        padding: 1rem 0;
     }
 }
