@@ -5,6 +5,7 @@ import MainBody from './MainBody';
 import MissionSection from './MissionSection';
 import Community from './Community'
 import Footer from './components/Footer';
+import { blue } from '@mui/material/colors';
 
 
 
@@ -14,7 +15,9 @@ function App() {
   },[])
   return (
       <div className="App">
-        <Navbar />
+        <div style={{height: 'fit-content', position: 'sticky', zIndex: '20', top: '0', width: '100%'}}>
+          <Navbar />
+        </div>
         <MainBody />
         <MissionSection />
         <Community />

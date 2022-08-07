@@ -47,6 +47,20 @@
 .newsletterImg {
     width: 300px;
 }
+
+.newsletterScrollDiv {
+    opacity: 1;
+    transform: scale(100%);
+    transition: 2s;
+    display: flex;
+}
+
+.newsletterScrollDivDefault {
+    opacity: 0;
+    transform: scale(70%);
+    transition: 2s;
+    display: flex;
+}
 @media only screen and (max-width: 1280px) {
 
 }
@@ -83,10 +97,6 @@
         gap: 1rem;
     }
 
-    .newsletterImg {
-        width: 225px;
-    }
-
     .newsletterText {
         font-weight: 400;
         max-width: 350px;
@@ -97,5 +107,12 @@
 
     .pana {
         width: 220px;
+    }
+    
+    .newsletterScrollDiv {
+        flex-direction: column;
+    }
+    .newsletterScrollDivDefault {
+        flex-direction: column;
     }
 }

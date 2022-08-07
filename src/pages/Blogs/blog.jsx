@@ -36,7 +36,7 @@ const Blog = () => {
     await axios.get(`https://consoltserver.herokuapp.com/user/featured`)
     .then(res => {
       const featuredList = res.data
-      setSynoped(featuredList.article.substring(0, 134))
+      setSynoped(featuredList.article.substring(0, 134) + '...')
       getNotes(featuredList)
     })
     .catch(err => {
@@ -56,7 +56,7 @@ const Blog = () => {
             <p>Have you drunk water today?</p>
             <p>Yes, I’m talking to YOU!</p>
         </div>):
-        <div>
+        <div style={{width: '100vw'}}>
           <BlogNavBar />
           <div className="blogHeaderWrap">
             <div className="blogHeader"><h1>The Consoltant Blog</h1></div>
@@ -82,7 +82,7 @@ const Blog = () => {
                     <div className="featuredPostDate">{notes.post_date}</div>
                     <div className="featuredPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minute(s) read</div>
                   </div>
-                  <div className="featuredPostSynopsis">{synoped}...</div>
+                  <div className="featuredPostSynopsis" dangerouslySetInnerHTML={ {__html: synoped} } />
                   <div className="featuredPostProfile">
                     {/* add author image to file */}
                     <div className="featuredAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>

@@ -47,7 +47,7 @@ const LatestPostWindow = () => {
                   <div className="latestPostDate">{notes.post_date}</div>
                   <div className="latestPostLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minutes read</div>
                 </div>
-                <div className="latestPostSynopsis">{notes.article.substring(0, 134) + " ..."}</div>
+                <div className="latestPostSynopsis" dangerouslySetInnerHTML={ {__html: notes.article.substring(0, 134) + " ..."} } />
                 <div className="latestPostProfile">
                   <div className="latestAuthorImg"><img src={AuthorImg} alt="Author image" className="AuthorImg" /></div>
                   <div className="latestPostAuthorName">{notes.author_name}</div>

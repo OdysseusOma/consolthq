@@ -17,7 +17,7 @@ import Loadingpng from './assets/loadingimage.png'
 
 const Main = () => {
   return (
-    <div className='main'>
+    <div className='main' style={{display: 'flex', width: 'inherit'}}>
         <Routes>
             <Route exact path="/" element={<App />} />
             <Route path="community" element={<Community />} />

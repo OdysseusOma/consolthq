@@ -141,4 +141,73 @@
 
 @media only screen and (max-width: 850px) {}
 
-@media only screen and (max-width: 700px) {}
+@media only screen and (max-width: 700px) {
+    .mainlatestPostWindow {
+        gap: 0.2rem;
+    }
+    .latestPostWindow {
+        display: flex;
+        flex-direction: row;
+        max-width: fit-content;
+        border: none;
+        border-bottom: 0.5px solid #47445C;
+        border-top: 0.5px solid #47445C;
+        border-radius: 0;
+        margin: 0;
+        height: fit-content;
+    }
+
+    .latestPostImgWrap {
+        width: 30vw;
+        height: inherit;
+        grid-column-start: 1;
+        border-radius: 0px;
+        z-index: -10;
+    }
+
+    .latestPostTopic {
+        font-weight: 200;
+        font-size: 17px;
+        line-height: 20px;
+        min-height: 20px;
+    }
+
+    .latestPostInfo {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .latestPostDate {
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .latestPostLength {
+        font-weight: 200;
+        font-size: 12px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .latestPostSynopsis {
+        display: none;
+    }
+
+    .latestPostMarginWrap {
+        display: block;
+        width: 50vw;
+        gap: 0.5rem;
+    }
+
+    .latestAuthorImg {
+        transform: scale(0.8);
+        z-index: -4;
+    }
+
+    .latestPostAuthorName {
+        font-size: 13px;
+    }
+}

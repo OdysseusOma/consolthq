@@ -1,8 +1,21 @@
 .blogNav {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    width: 100vw;
+    transition: 1s;
+}
+
+.blogNavUnScrolled {
     padding: 1rem 2rem;
     background-color: #DFE3E8;
+}
+
+.blogNavScrolled {
+    background-color: grey;
+    padding: 0.5rem 2rem;
 }
 
 .navButtons {
@@ -33,6 +46,7 @@
         padding: 1rem;
         align-items: center;
         justify-content: space-between;
+        height: fit-content;
     }
 
     .navButtons {
@@ -47,19 +61,17 @@
     }
 
     .mobileBlogLinks {
-        position: absolute;
         display: flex;
-        background-color: #DFE3E8;
+        background-color: inherit !important;
         flex-direction: column;
-        width: 80vw;
+        width: 100%;
+        height: fit-content;
         gap: 1.5rem;
         top: 3rem;
-        overflow: hidden;
-        text-align: left;
-        padding: 1.5rem 0;
+        text-align: center;
+        padding: 1rem;
         font-weight: 400;
         font-size: 20px;
-        line-height: 25px;
     }
 
     .logoImg {
@@ -83,7 +95,7 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-        background-color: #DFE3E8;
+        background-color: inherit !important;
         padding: 1rem 0;
     }
 }

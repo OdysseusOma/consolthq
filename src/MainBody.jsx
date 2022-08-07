@@ -3,8 +3,14 @@ import './MainBody.css'
 import Group10 from './assets/Group10.png'
 import { Link } from "react-router-dom";
 import BlueButton from './components/blueButton';
+import { useInView } from 'react-intersection-observer';
 
 const MainBody = (props) => {
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0.4,
+  });
+
   return (
     <header className='mainBody'>
         <div className="textDiv">
@@ -21,7 +27,7 @@ const MainBody = (props) => {
           </div>
         </div>
         <div className="imageDiv">
-          <div className="image">
+          <div className={inView? 'imageset': 'imagedefault'} ref={ref}>
             <img className='group10' src={Group10} alt="" />
           </div>
         </div>

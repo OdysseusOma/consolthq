@@ -14,6 +14,7 @@ import axios from 'axios';
 import Loadingpng from '../../assets/loadingimage.png'
 import BlueButton from '../../components/blueButton'
 
+
 const Post = () => {
     let { id } = useParams();
     const [notes, getNotes] = useState('');
@@ -48,6 +49,7 @@ const Post = () => {
         })
     }
 
+
  
   return (
     <div>
@@ -81,7 +83,7 @@ const Post = () => {
                 
                 <div className="postArticleWrap">
                     <div className="postArticleImgWrap"><img src={notes.imageURL} alt="Post article image" className="postArticleImg" /></div>
-                    <div className="postArticleText">{notes.article}</div>
+                    <div className="postArticleText" dangerouslySetInnerHTML={ {__html: notes.article} } />
                 </div>
             
                 <div className="postSocialMediaIcons">
