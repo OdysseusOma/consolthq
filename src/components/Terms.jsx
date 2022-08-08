@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 const Terms = () => {
   return (
-    <div  className='policydiv'>
+    <div  className='policydiv' style={{width: '100%'}}>
         <Navbar />
         <div style={{maxWidth: '90vw', display: 'flex', flexDirection: 'column', margin: 'auto'}}>
             <h2 style={{textAlign: 'center'}}><b className='policyP'>TERMS AND CONDITIONS</b></h2>

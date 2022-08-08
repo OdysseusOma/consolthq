@@ -8,7 +8,7 @@ import './privacyPolicy.css'
 const PrivacyPolicy = () => {
 
   return (
-    <div className='policydiv'>
+    <div className='policydiv' style={{width: '100%'}}>
         <Navbar />
         <div style={{maxWidth: '90vw', display: 'flex', flexDirection: 'column', margin: 'auto'}}>
 
