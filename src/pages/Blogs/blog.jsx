@@ -61,9 +61,9 @@ const Blog = () => {
           <div className="blogHeaderWrap">
             <div className="blogHeader"><h1>The Consoltant Blog</h1></div>
             <div className="blogHeaderIcons">
-              <div className="twitter blogIcon"><a href='https://www.google.com'><TwitterIcon /></a></div>
-              <div className="instagram blogIcon"><a href='https://www.google.com'><InstagramIcon /></a></div>
-              <div className="facebook blogIcon"><a href='https://www.google.com'><FacebookRoundedIcon /></a></div>
+              <div className="twitter blogIcon"><a href='https://www.google.com'><TwitterIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
+              <div className="instagram blogIcon"><a href='https://www.google.com'><InstagramIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
+              <div className="facebook blogIcon"><a href='https://www.google.com'><FacebookRoundedIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
             </div>
           </div>
           <div className="blogArticleWindow">
