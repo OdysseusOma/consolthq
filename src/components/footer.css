@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+.footerinstagram {
+    transform: scale(1.8);
+    align-items: center;
+}
+
 .footerLogo {
     height: 21px;
 }
@@ -51,10 +56,16 @@ a:hover {
 .footerCopyright {
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 13px;
 }
 
 .blackIcon {
     color: black;
+}
+
+.CopyrightIcon {
+    transform: scale(0.7);
 }
 
 @media only screen and (max-width: 1280px) {
@@ -73,6 +84,11 @@ a:hover {
         width: auto;
     }
 
+    .socialMediaIcons {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
     .footerLinks {
         font-weight: 500;
         font-size: 8px;
@@ -81,9 +97,12 @@ a:hover {
 
     .footerCopyright {
         font-weight: 400;
-        font-size: 10px;
+        font-size: 8px;
         line-height: 5px;
         height: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .footerLinkText {
@@ -92,8 +111,14 @@ a:hover {
         line-height: 15px;
     }
 
-    .footerCopyright {
-        
+    .footerText {
+        font-size: 15px;
     }
+
+
+    .blackIcon {
+        transform: scale(0.8);
+    }
+
 }
 

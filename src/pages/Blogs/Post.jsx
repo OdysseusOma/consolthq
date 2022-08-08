@@ -11,7 +11,7 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import RelatedPostWindow from '../../components/PostWindow' 
 import Footer from '../../components/Footer';
 import axios from 'axios';
-import Loadingpng from '../../assets/loadingimage.png'
+import Postpng from '../../assets/postpng.png'
 import BlueButton from '../../components/blueButton'
 
 
@@ -52,19 +52,20 @@ const Post = () => {
 
  
   return (
-    <div>
+    <div className='postPage'>
 
-        {loading? (<div style={{height: '100vh', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-            <img src={Loadingpng} alt="" />
-            <p>Have you drunk water today?</p>
-            <p>Yes, I’m talking to YOU!</p>
+        {loading? (<div style={{height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+            <img src={Postpng} alt="" />
+            <p>When last did you check your blood pressure?</p>
         </div>): 
-        <div>
-            <BlogNavBar className='blgNavBarPost'/>
+        <div style={{width: '100vw'}}>
+            <div style={{width: '100%', position: 'sticky', top: '0', zIndex: '15'}}>
+                <BlogNavBar />
+            </div>
 
             <div className='postHeader'>
                 
-                <div className="featuredPostTopic"><h2>{notes.title}</h2></div>
+                <div className="postHeaderTitle"><h2>{notes.title}</h2></div>
                 <div className="postHeaderInfo">
                     <div className="postHeaderDate">{notes.post_date}</div>
                 <div className="postHeaderLength"><AccessTimeIcon style={{maxWidth:'20px'}}/>{notes.post_length} minutes read</div>
@@ -76,20 +77,22 @@ const Post = () => {
             </div>
             <div className='postArticle'>
                 <div className="postSocialMediaIcons">
-                    <div className="twitter"><a href='https://www.google.com'><TwitterIcon /></a></div>
-                    <div className="instagram"><a href='https://www.google.com'><InstagramIcon /></a></div>
-                    <div className="facebook"><a href='https://www.google.com'><FacebookRoundedIcon /></a></div>
+                    <div className="twitter postSocialColor"><a href='https://www.google.com'><TwitterIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
+                    <div className="instagram postSocialColor"><a href='https://www.google.com'><InstagramIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
+                    <div className="facebook postSocialColor"><a href='https://www.google.com'><FacebookRoundedIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
                 </div>
                 
                 <div className="postArticleWrap">
                     <div className="postArticleImgWrap"><img src={notes.imageURL} alt="Post article image" className="postArticleImg" /></div>
-                    <div className="postArticleText" dangerouslySetInnerHTML={ {__html: notes.article} } />
+                    <div style={{width: 'inherit', display: 'flex', flexWrap: 'wrap'}}>
+                        <p className="postArticleText" dangerouslySetInnerHTML={ {__html: notes.article} } />
+                    </div>
                 </div>
             
                 <div className="postSocialMediaIcons">
-                    <div className="twitter"><a href='https://www.google.com'><TwitterIcon /></a></div>
-                    <div className="instagram"><a href='https://www.google.com'><InstagramIcon /></a></div>
-                    <div className="facebook"><a href='https://www.google.com'><FacebookRoundedIcon /></a></div>
+                    <div className="twitter postSocialColor"><a href='https://www.google.com'><TwitterIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
+                    <div className="instagram postSocialColor"><a href='https://www.google.com'><InstagramIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
+                    <div className="facebook postSocialColor"><a href='https://www.google.com'><FacebookRoundedIcon style={{color: 'rgba(141, 137, 137, 0.51)'}}/></a></div>
                 </div>
                 
             </div>

@@ -92,7 +92,7 @@ const BlogNavBar = () => {
             </div>
             <div className='mobileSearchWrap'>
                 <a onClick={() => {setOpenSearch(!openSearch)}}><SearchIcon /></a>
-                <a className="caro" onClick={() => {setOpenMenu(!openMenu)}}>
+                <a className="carol" onClick={() => {setOpenMenu(!openMenu)}}>
                     {!openMenu? <MenuIcon /> : <CloseIcon />}
                 </a>
             </div>

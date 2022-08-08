@@ -152,15 +152,23 @@
 @media only screen and (max-width: 850px) {
     .blogArticleWindow {
         flex-direction: column;
-        margin: 0 auto;
+        margin: 0 1rem;
         gap: 1rem;
     }
 
+    .featuredPostBox {
+        margin: auto;
+        
+    }
 
     .RecommendedPostWindowBox {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+    }
+
+    .blogMobileText {
+        padding: 0rem 1rem;
     }
 }
 

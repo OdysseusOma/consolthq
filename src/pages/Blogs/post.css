@@ -1,5 +1,13 @@
+.postPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: auto;
+}
+
 .blgNavBarPost {
     z-index: 1;
+    width: inherit;
 }
 
 .postHeader {
@@ -13,7 +21,7 @@
 
 .postHeaderTitle {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 56px;
 }
 
@@ -86,6 +94,8 @@
     display: flex;
     flex-wrap: wrap;
     margin: 1rem 1rem 2rem 1rem;
+    font-weight: 200;
+    font-size: 16px;
 }
 
 .postSocialMediaIcons {
@@ -94,6 +104,7 @@
     justify-content: center;
     gap: 3rem;
 }
+
 
 .backButton {
     display: flex;
@@ -106,15 +117,18 @@
 @media only screen and (max-width: 1280px) {}
 
 @media only screen and (max-width: 850px) {
-    postArticleWrap {
+    .postArticleWrap {
         width: 70vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
 @media only screen and (max-width: 700px) {
     .postHeaderTitle {
-        font-weight: 400;
-        font-size: 26px;
+        font-weight: 300;
+        font-size: 15px;
         line-height: 30px;
     }
 
@@ -122,12 +136,30 @@
         display: none;
     }
 
+    .postArticleText {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 100;
+        font-size: 13px;
+        margin: 0 0.5rem 1rem 0.5rem;
+    }
+
+    .postArticle {
+        margin: 0 1rem;
+    }
+
     .postArticleWrap {
         width: 90vw;
-        border: 1px solid #000000;
+        border: none;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
         border-radius: 37px;
         position: relative;
         top: -60px;
         z-index: 0;
+    }
+
+    .backButton {
+        padding: 0.3rem;
     }
 }

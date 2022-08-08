@@ -47,8 +47,8 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav className={!stickyClass? "navBasics defaultFixedNav" : "navBasics fixedNav"}>
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', position: 'relative', backgroundColor: 'inherit'}}>
+    <div className={!stickyClass? "navBasics defaultFixedNav" : "navBasics fixedNav"}>
+      <nav style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', position: 'relative', height: '100%'}}>
         <Link to="/">
           <div className="logo">
             <img src={Logo} alt="Consolt" />
@@ -70,7 +70,7 @@ const Navbar = () => {
         <a className="caro" onClick={() => {setOpenMenu(!openMenu)}}>
           {!openMenu? <MenuIcon /> : <CloseIcon />}
         </a>
-      </div>
+      </nav>
       <Collapsible open={openMenu}>
           <div className='mobileSearchDisplay'>
               <div className="mobilelinks" id='menuItem'>
@@ -80,7 +80,7 @@ const Navbar = () => {
               </div> 
           </div>
       </Collapsible>
-    </nav>
+    </div>
   )
   
 
