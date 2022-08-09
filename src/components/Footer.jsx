@@ -19,10 +19,10 @@ const Footer = () => {
         <div className="socialMediaIcons">
             <p className="footerText">Connect With Us</p>
             <div className="iconWrapper">
-                <div className="twitter blackIcon"><a href='https://www.google.com'><TwitterIcon style={{color: '#1D9BF0'}}/></a></div>
-                {/* <div className="blackIcon"><a href='https://www.google.com'><InstagramIcon /></a></div> */}
-                <div className="email blackIcon"  style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><a href='https://www.google.com'><img src={Insta} alt="" className='footerinstagram'/></a></div>
-                <div className="facebook blackIcon"><a href='https://www.google.com'><FacebookRoundedIcon style={{color: '#1977F3'}}/></a></div>
+                <div className="twitter blackIcon"><a href='https://www.google.com'><TwitterIcon /></a></div>
+                <div className="blackIcon"><a href='https://www.google.com'><InstagramIcon /></a></div>
+                {/* <div className="email blackIcon"  style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}><a href='https://www.google.com'><img src={Insta} alt="" className='footerinstagram'/></a></div> */}
+                <div className="facebook blackIcon"><a href='https://www.google.com'><FacebookRoundedIcon /></a></div>
                 <div className="email blackIcon"><a href='https://www.google.com'><EmailIcon /></a></div>
             </div>
         </div>
